@@ -1,4 +1,3 @@
-import os
 from datetime import datetime
 prom=input("Es dia de promoción?(S/N): ")
 precio1=0
@@ -24,7 +23,7 @@ while True:
             print("La orden de la mesa es:", pedido1)
             print("El valor total de la compra es de:", precio1)
         elif accion.lower()=="f":
-            file=with open(r"..\registro_pedidos_mesa_1.txt", "w") as file:
+            with open(r"..\registro_pedidos_mesa_1.txt", "w") as file:
                 file.write("--------------------\n")
                 file.write("Registros de pedidos mesa #1 "+str(datetime.now())+"\n")
                 file.write("--------------------\n")
